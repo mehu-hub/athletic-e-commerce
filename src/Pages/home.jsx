@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../Layout/Navbar';
 import '../Assets/home.css'
 import ShopCard from '../Components/shopcard'
+import Footer from '../Layout/Footer';
 
 const home = () => {
 
@@ -14,13 +15,13 @@ const home = () => {
         },
         {
             image: 'https://lts-images.azureedge.net/product-images/67362668_Zoom.jpg',
-            title: 'T Shirt',
+            title: 'Winter T Shirt',
             description: 'Exclusive T-shirt',
             price: '450'
         },
         {
             image: 'https://lts-images.azureedge.net/product-images/67362497_Zoom.jpg',
-            title: 'Men shirt',
+            title: 'Hoodie',
             description: 'Premium men formal Shirt',
             price: '900'
         },
@@ -48,6 +49,7 @@ const home = () => {
                     )
                 })}
             </div>
+            <Footer/>
         </>
     );
 };
