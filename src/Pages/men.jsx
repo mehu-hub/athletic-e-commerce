@@ -8,7 +8,7 @@ const Men = () => {
         <>
             <Navbar/>
             <div className='shop-now'>
-                <h1>Men's Fashion</h1>
+                <h1>Men Fashion</h1>
                 <hr />
             </div>
             <div className='fixed-height'>
