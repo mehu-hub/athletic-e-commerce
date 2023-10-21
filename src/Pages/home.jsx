@@ -34,6 +34,7 @@ const home = () => {
             price: '2222'
         }
     ]
+    
     return (
         <>
             <Layout>

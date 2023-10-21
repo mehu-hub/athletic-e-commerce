@@ -8,6 +8,7 @@ import Women from './Pages/women';
 import Kids from './Pages/kids';
 import Trending from './Pages/trending';
 import District from './Pages/district';
+import ShopCard from './Components/shopcard';
 
 function App() {
   return (
@@ -18,9 +19,10 @@ function App() {
         <Route exact path='/women' element={<Women/>}/>
         <Route exact path='/kids' element={<Kids/>}/>
         <Route exact path='/trending' element={<Trending/>}/>
+        {/* <Route exact path='/shop-card/:id/:name' element={<ShopCard/>}/> */}
         {/* ----------------------------------------------- */}
         <Route exact path="/contact" element={<Contact />} />
-        <Route exact path="/about-us" element={<About />} />
+        <Route exact path="/about-us/:id" element={<About />} />
         <Route exact path="/district" element={<District />} />
       </Routes>
     </>
