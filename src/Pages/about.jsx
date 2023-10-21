@@ -1,10 +1,13 @@
-import React from "react"; 
+import React from "react";
 import Navbar from "../Layout/Navbar";
+import Layout from "../Layout/Layout";
 const About = () => {
     return (
         <>
-            <Navbar/>
-            <h1>This is About Page</h1> 
+            <Layout>
+                <h1>This is About Page</h1>
+            </Layout>
+
         </>
     )
 }

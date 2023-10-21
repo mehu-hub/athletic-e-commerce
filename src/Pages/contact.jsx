@@ -1,10 +1,11 @@
 import React from "react";
-import Navbar from "../Layout/Navbar";
+import Layout from "../Layout/Layout";
 const Contact = () => {
     return (
         <>
-            <Navbar />
-            <h1>This is Contact Us Page</h1>
+            <Layout>
+                <h1>This is Contact Us Page</h1>
+            </Layout>
         </>
     )
 }

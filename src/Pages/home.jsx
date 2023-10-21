@@ -4,6 +4,7 @@ import '../Assets/home.css'
 import ShopCard from '../Components/shopcard'
 import Footer from '../Layout/Footer';
 import District from './district';
+import Layout from '../Layout/Layout';
 
 const home = () => {
 
@@ -35,7 +36,7 @@ const home = () => {
     ]
     return (
         <>
-            <Navbar />
+            <Layout>
             <h1 className='shop-now'>SHOP NOW</h1>
             <hr />
             <div className='shop_card'>
@@ -50,7 +51,7 @@ const home = () => {
                     )
                 })}
             </div>
-            <Footer/>
+            </Layout>
         </>
     );
 };
