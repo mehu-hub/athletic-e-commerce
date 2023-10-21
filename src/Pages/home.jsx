@@ -36,7 +36,7 @@ const home = () => {
     return (
         <>
             <Navbar />
-            <h1 className='shop-now'>SHOP NOW</h1>
+            <h1 className=''>SHOP NOW</h1>
             <hr />
             <div className='shop_card'>
                 {shopCart.map((item) => {
