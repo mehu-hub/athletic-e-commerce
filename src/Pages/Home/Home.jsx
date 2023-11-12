@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Layout from "../../Layout/Layout";
 import { Carousel } from "keep-react";
+import Cover from '../../Assets/images/Cover.jpg'
 import axios from "axios";
 
 const Home = () => {
@@ -18,38 +19,46 @@ const Home = () => {
     return (
         <>
             <Layout>
-                <div className="container mx-auto mt-5 h-56 w-full sm:h-64 xl:h-80 2xl:h-96">
-                    <Carousel indicatorsType="ring" indicators={true}>
+                <div className="container mx-auto md:flex gap-5 mt-5 h-56 w-full sm:h-64 xl:h-80 2xl:h-96">
+                    <Carousel className="w-[70%]" indicatorsType="ring" indicators={true}>
                         {settings?.hompageBanner.map((banner, index) => {
                             return (
                                 <div>
                                     <img
-                                        src={banner.banner_image}
-                                        alt="slider-1" 
-                                        className="h-[800px] w-[100%]"
-                                    /> 
+                                        src={Cover}
+                                        alt="slider-1"
+                                        className="h-[500px] w-[100%]"
+                                    />
                                 </div>
                             )
                         })}
-                        {/* <img
-                            src="https://images.prismic.io/staticmania/ecd45179-4b86-4a34-b245-0078e022db5a_1.png?auto=compress,format"
-                            alt="slider-1"
-                            height={400}
-                            width={910}
-                        />
-                        <img
-                            src="https://images.prismic.io/staticmania/dee3ff09-3ddc-4340-bc8f-ea0028bb4a61_2.png?auto=compress,format"
-                            alt="slider-2"
-                            height={400}
-                            width={910}
-                        />
-                        <img
-                            src="https://images.prismic.io/staticmania/a5c7143d-24dd-4531-9f00-243f4eb27e28_3.png?auto=compress,format"
-                            alt="slider-3"
-                            height={400}
-                            width={910}
-                        /> */}
                     </Carousel>
+                    <div className="w-[30%]">
+                        <Carousel
+                            showControls={false}
+                            indicatorsType="ring"
+                            indicatorsTypeColors="slate"
+                        >
+                            <img
+                                src="https://img.freepik.com/free-psd/exclusive-sneakers-social-media-post-template-design_505751-4682.jpg?w=826&t=st=1699817031~exp=1699817631~hmac=1908ea00ab5f308afbf991d2df1c2eaa5c760a43a85a01036bc1953faaaea0b7"
+                                alt="slider-1"
+                                height={384}
+                                width={440}
+                            />
+                            <img
+                                src="https://img.freepik.com/free-photo/new-smartwatch-balancing-with-hand_23-2150296477.jpg?w=826&t=st=1699816516~exp=1699817116~hmac=c5ff88a38d3687334a843210c0f3e3974d35dcd6331b34d98aaa69895024b290"
+                                alt="slider-2"
+                                height={384}
+                                width={440}
+                            />
+                            <img
+                                src="https://img.freepik.com/free-photo/headphones-balancing-with-blue-background_23-2150271756.jpg?w=826&t=st=1699816977~exp=1699817577~hmac=82014de4c1592494920b0d1af476123aa7a61737785e7fc92f4b082a9fd66f42"
+                                alt="slider-3"
+                                height={384}
+                                width={440}
+                            />
+                        </Carousel> 
+                    </div>
                 </div>
             </Layout>
         </>
