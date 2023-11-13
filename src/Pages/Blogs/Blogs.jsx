@@ -22,7 +22,7 @@ const Blogs = () => {
                         //to={`/blogs/${blog.slug}`} key={index}
                         <Link to={`/blogs/${blog.slug}`} key={index}>
                             
-                            <div className="container mx-auto m-8 p-8 gap-8 flex shadow-lg border border-gray-200 rounded"> 
+                            <div className="container mx-auto m-8 p-5 gap-8 md:flex shadow-lg border border-gray-200 rounded"> 
                                     <img src={blog.image} className="h-[200px]" width={250} alt="" /> 
                                 <div>
                                     <h3 className="text-2xl font-bold">{blog.title}</h3>

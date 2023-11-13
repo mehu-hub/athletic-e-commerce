@@ -4,7 +4,7 @@ import Layout from '../../Layout/Layout';
 const About = () => {
     return ( 
         <Layout>
-            <h2>This is About Us Page</h2>
+            <h2 className="container mx-auto text-gray-400 font-bold text-6xl mt-5">About Us</h2>
         </Layout>
     );
 };

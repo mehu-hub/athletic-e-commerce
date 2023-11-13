@@ -1,45 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../Assets/images/logo-blue.png'
-import { BsSearch } from 'react-icons/bs';
+import { BsBorderWidth } from 'react-icons/bs';
+import './Navbar.css'
 
 const Navbar = () => {
+    const [isOpen, setIsOpen] = useState(false);
     return (
-        <div className="h-[80px] shadow-lg flex">
-            <div className="container mx-auto flex justify-between items-center">
-                <div className="flex ">
-                    <Link to={'/'}><img className='w-36' src={logo} alt="" /></Link>
-                </div>
-
-                <div className="flex w-1/4 items-center gap-2">
-                    <BsSearch/>
-                    <input className="outline-none  p-2 border-l-2 border-indigo-50" type="search" placeholder="search your product" />
-                </div>
-                <i className="ri-search-line text-black"></i>
-                <div>
-                    <ul className="flex gap-5">
-                        <Link className="font-semibold" to={'/'}>Home</Link>
-                        <div className='border-r-2 border-gray-300'>
-
+        <header className="py-10 shadow-md" id="#header">
+            <div className="container mx-auto">
+                <div className='container mx-auto flex nav justify-between items-center'>
+                    <a href="#header">
+                        <img className='w-[120px]' src={logo} alt="" />
+                    </a>
+                    <div className="Navbar ">
+                        <div className={`nav-items ${isOpen && "open"}`}>
+                            <Link to={'/'}><a href="#about">Home</a></Link>
+                            <Link to={'/shop'}><a href="#about">Shop Now</a></Link>
+                            <Link to={'/about'}><a href="#about">About</a></Link>
+                            <Link to={'/contact'}><a href="#about">Contact</a></Link>
+                            <Link to={'/blogs'}><a href="#about">Blog's</a></Link> 
                         </div>
-
-                        <Link className="font-semibold" to={'/shop'}>Shop Now</Link>
-                        <div className='border-r-2 border-gray-300'>
+                        <div
+                            className={`nav-toggle ${isOpen && "open"}`}
+                            onClick={() => setIsOpen(!isOpen)}
+                        >
+                            <div className="bar"><BsBorderWidth/></div>
                         </div>
-
-                        <Link className="font-semibold" to={'/about'}>About Us</Link>
-                        <div className='border-r-2 border-gray-300'>
-                        </div>
-
-                        <Link className="font-semibold" to={'/contact'}>Contact Us</Link>
-                        <div className='border-r-2 border-gray-300'>
-                        </div>
-
-                        <Link className="font-semibold" to={'/blogs'}>Blog's</Link>
-                    </ul>
+                    </div>
                 </div>
             </div>
-        </div>
+        </header>
     );
 };
 

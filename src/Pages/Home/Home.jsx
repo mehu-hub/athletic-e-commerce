@@ -19,13 +19,13 @@ const Home = () => {
     return (
         <>
             <Layout>
-                <div className="container mx-auto md:flex gap-5 mt-5 h-56 w-full sm:h-64 xl:h-80 2xl:h-96">
-                    <Carousel className="w-[70%]" indicatorsType="ring" indicators={true}>
+                <div className="container mx-auto md:flex flex-cols gap-5 mt-5 h-56 w-full sm:h-64 xl:h-80 2xl:h-96">
+                    <Carousel className="md:w-[70%]" indicatorsType="ring" indicators={true}>
                         {settings?.hompageBanner.map((banner, index) => {
                             return (
                                 <div>
                                     <img
-                                        src={Cover}
+                                        src={banner.banner_image}
                                         alt="slider-1"
                                         className="h-[500px] w-[100%]"
                                     />
@@ -33,7 +33,7 @@ const Home = () => {
                             )
                         })}
                     </Carousel>
-                    <div className="w-[30%]">
+                    <div className="md:w-[30%]">
                         <Carousel
                             showControls={false}
                             indicatorsType="ring"
