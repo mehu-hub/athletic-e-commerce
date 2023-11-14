@@ -5,8 +5,8 @@
      
 } 
 .nav{ 
-    background-color: white;
-    position: fixed;    
+    padding: 20px;
+    background-color: white;   
      
 }
 
@@ -46,7 +46,10 @@
 }
 
 @media (max-width: 700px) { 
-    .Navbar>.nav-items {
+    .nav{
+        z-index: 1;
+    }
+    .Navbar>.nav-items { 
         background: rgb(255, 255, 255);  
         position: fixed;
         top: 80px;
@@ -64,10 +67,10 @@
     .Navbar>.nav-items>a{
         color: rgb(0, 0, 0);
     } 
-    .Navbar>.nav-items.open { 
+    .Navbar>.nav-items.open {  
         transform: translateX(0);
     } 
-    .Navbar>.nav-toggle {
+    .Navbar>.nav-toggle { 
         display: flex;
         font-size: 22px;
         width: 50px;

@@ -7,11 +7,11 @@ import './Navbar.css'
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     return (
-        <header className="py-10 shadow-md" id="#header">
-            <div className="container mx-auto">
-                <div className='container mx-auto flex nav justify-between items-center'>
+        <header className="shadow-md" id="#header">
+            <div className="container mx-auto ">
+                <div className="container mx-auto flex nav justify-between items-center">
                     <a href="#header">
-                        <img className='w-[120px]' src={logo} alt="" />
+                        <Link to={'/'}><img className='w-[120px]' src={logo} alt="" /></Link>
                     </a>
                     <div className="Navbar ">
                         <div className={`nav-items ${isOpen && "open"}`}>

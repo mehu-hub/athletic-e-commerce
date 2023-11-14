@@ -6,6 +6,7 @@ import About from './Pages/About/About';
 import Contact from './Pages/Contact/Contact';
 import Blogs from './Pages/Blogs/Blogs';
 import axios from 'axios';
+import BlogDetails from './Pages/Blogs/BlogDetails';
 
 
 function App() {
@@ -16,9 +17,9 @@ function App() {
         <Route extact path='/' element={<Home />} />
         <Route extact path='/shop' element={<Shop />} />
         <Route extact path='/about' element={<About />} />
-        <Route extact path='/contact' element={<Contact />} />
-        
+        <Route extact path='/contact' element={<Contact />} /> 
         <Route extact path='/blogs' element={<Blogs />} /> 
+        <Route extact path='/blogs/:slug' element={<BlogDetails />} /> 
       </Routes>
     </>
   );
