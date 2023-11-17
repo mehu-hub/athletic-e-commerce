@@ -39,7 +39,7 @@ const Header = () => {
                             </Link>
                             <Link className="flex items-center md:mt-4 mt-2 gap-2">
                                 <HiGift />
-                                <li>Gadget & Accessories</li>
+                                <li>Accessories</li>
                             </Link>
                         </ul>
                     </div>

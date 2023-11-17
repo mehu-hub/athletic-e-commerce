@@ -17,12 +17,14 @@ const Navbar = () => {
     return (
         <header>
             <div className='nav-bar'>
-                <div className='container mx-auto p-3 text-[14px] flex items-center justify-between font-semibold text-gray-600'>
+
+                {/* Top Navigation Sub bar */}
+                <div className='container hidden mx-auto p-3 text-[12px] md:flex items-center justify-between font-semibold text-gray-600'>
                     <div className='flex items-center gap-2'>
-                        <FaTelegramPlane className='text-xl' />
+                        <FaTelegramPlane className='text-[15px]' />
                         <p>Express delivery and free returns within 7 days</p>
                     </div>
-                    <div className='flex justify-start gap-10 items-center'>
+                    <div className='md:flex justify-start gap-10 items-center'>
                         <div className='flex items-center gap-2'>
                             <HiMail className='text-[18px]' />
                             <p>athleticshop@gmail.com</p>
@@ -41,14 +43,14 @@ const Navbar = () => {
                 <nav className='container mx-auto nav-items-div'>
                     <ul className="sidebar">
                         <li onClick={hideSidebar}><Link><FaChevronRight /></Link></li>
-                        <li className='flex justify-center items-center text-gray-400 border-b-2 border-blue-600'>
+                        <li className='flex justify-center items-center text-gray-400 border-b-2 border-blue-200'>
                             <FaSearch className='hideOnMobile' />
                             <input className='outline-none p-2 w-[400px]' type="search" placeholder='Search your products' />
                         </li>
-                        <Link><li>Products</li></Link>
-                        <Link><li>Men</li></Link>
-                        <Link><li>Women</li></Link>
-                        <Link><li>Kids</li></Link>
+                        <Link><li>products</li></Link>
+                        <Link><li>men</li></Link>
+                        <Link><li>women</li></Link>
+                        <Link><li>kids</li></Link>
                         <Link>
                             <li className='flex text-xl gap-2 items-center'>
                                 <FaCartPlus />
@@ -63,10 +65,10 @@ const Navbar = () => {
                             <FaSearch />
                             <input className='outline-none p-2 w-[400px]' type="search" placeholder='Search your products' />
                         </li>
-                        <Link><li className='hideOnMobile'>Products</li></Link>
-                        <Link><li className='hideOnMobile'>Men</li></Link>
-                        <Link><li className='hideOnMobile'>Women</li></Link>
-                        <Link><li className='hideOnMobile'>Kids</li></Link>
+                        <Link><li className='hideOnMobile'>products</li></Link>
+                        <Link><li className='hideOnMobile'>men</li></Link>
+                        <Link><li className='hideOnMobile'>women</li></Link>
+                        <Link><li className='hideOnMobile'>kids</li></Link>
                         <Link>
                             <li className='flex text-xl gap-2 items-center hideOnMobile'>
                                 <FaCartPlus />
