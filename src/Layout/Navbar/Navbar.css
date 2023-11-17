@@ -5,10 +5,13 @@
 body{   
     font-family: 'Roboto', sans-serif;
 }
-.nav-bar{
-    padding: 15px;
+
+.nav-bar{ 
     background-color: white; 
     box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+}
+.nav-items-div{
+    padding: 15px;
 }
 nav ul{
     width: 100%;
