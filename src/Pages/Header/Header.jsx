@@ -34,7 +34,7 @@ const Header = () => {
                                 <li>Women Fashion</li>
                             </Link>
                             <Link className="flex items-center md:mt-4 mt-2 gap-2">
-                                <HiGift className="text-violet-400" />
+                                <HiGift className="text-purple-600" />
                                 <li>Kid's Fashion</li>
                             </Link>
                             <Link className="flex items-center md:mt-4 mt-2 gap-2">
