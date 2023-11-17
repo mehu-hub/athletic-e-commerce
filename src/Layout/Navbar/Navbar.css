@@ -14,7 +14,7 @@ body{
     padding: 15px;
 }
 nav ul{
-    width: 100%;
+    width: 50%;
     list-style: none;
     display: flex;
     justify-content: flex-end;
