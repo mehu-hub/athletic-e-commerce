@@ -1,84 +1,76 @@
-.Navbar { 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-     
+*{
+    padding: 0;
+    margin: 0;
 } 
-.nav{ 
-    padding: 20px;
-    background-color: white;   
-     
+body{   
+    font-family: 'Roboto', sans-serif;
 }
-
-.Navbar>.nav-items>a {
-    color: #252525;
-    font-size: 16px;
-    font-weight: 500;
-    text-decoration: none;
-    margin: 15px;
-    position: relative;
-
+.nav-bar{
+    padding: 15px;
+    background-color: white; 
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
 }
-
-.Navbar>.nav-items>a:hover {
-    opacity: 1;
-}
-
-.Navbar>.nav-items>a::before {
-    content: "";
-    color: #4567ef;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 2px; 
-    transition: all 0.45s;
-}
-
-.Navbar>.nav-items>a:hover::before {
+nav ul{
     width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}  
+nav li:first-child{
+    margin-right: auto; 
+}
+nav a{
+    font-weight: bold;
+    height: 100%;
+    padding: 0 25px;
+    text-decoration: none;
+    display: flex;align-items: center;
+    color: black;
+}
+nav a:hover{  
+    color: darkblue;
 }
 
-.Navbar>.nav-toggle {
-    font-size: 30px;
-    color: black;
+
+.sidebar{ 
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999; 
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0,0,0,0.1); 
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}  
+.sidebar li{
+    width: 100%;
+
+}
+.sidebar a{
+    height: 50px;
+} 
+
+.menu-icon{
     display: none;
 }
 
-@media (max-width: 700px) { 
-    .nav{
-        z-index: 1;
+@media (max-width: 800px) {
+    .hideOnMobile{
+        display: none;
+    } 
+    .logo{
+        max-width: 200px;
     }
-    .Navbar>.nav-items { 
-        background: rgb(255, 255, 255);  
-        position: fixed;
-        top: 80px;
-        text-align: center;
-        margin-right: 50px;
-        font-weight: 500;
-        display: flex;
-        flex-direction: column;
-        left: 0; 
-        width: 100%;
-        height: 100%; 
-        transform: translateX(100%);
-        transition: all .45s;
-    } 
-    .Navbar>.nav-items>a{
-        color: rgb(0, 0, 0);
-    } 
-    .Navbar>.nav-items.open {  
-        transform: translateX(0);
-    } 
-    .Navbar>.nav-toggle { 
-        display: flex;
-        font-size: 22px;
-        width: 50px;
-        height: 50px;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-    }   
-
-
-}
+    .menu-icon{
+        display: block;
+    }
+    .nav a{
+        padding: 0;
+    }
+}  
