@@ -10,7 +10,7 @@ const Header = () => {
     return (
         <>
             <Layout>
-                <section className="container mx-auto mt-10">
+                <section className="container mx-auto mt-10 md:flex gap-10">
                     <div className="md:w-[20%]">
                         <div className="flex items-center">
                             <HiLightningBolt className="text-2xl text-gray-600" />
@@ -27,7 +27,7 @@ const Header = () => {
                                 <li>All Fashion</li>
                             </Link>
                             <Link className="flex mt-2 items-center gap-2 bg-blue-25 rounded p-2">
-                                <HiGift  className="text-green-400"/>
+                                <HiGift className="text-green-400" />
                                 <li>Men Fashion</li>
                             </Link>
                             <Link className="flex mt-2 items-center gap-2 bg-blue-25 rounded p-2">
@@ -44,19 +44,33 @@ const Header = () => {
                             </Link>
                         </ul>
                     </div>
-                    <div>
-                        <div>
-                            <div>
-                                
+                    <div className="md:w-[80%] flex flex-col gap-10">
+                        <div class="grid grid-cols-3 gap-5">
+                            <div class="bg-red-50 rounded-xl h-[135px]">
+                                <img src="" alt="" />
                             </div>
-                            <div>
-
+                            <div class="bg-green-50 rounded-xl p-10 row-span-2">
+                                <img src="" alt="" />
                             </div>
-                            <div>
-
+                            <div class="bg-green-50 rounded-xl p-10 row-span-2">
+                                <img src="" alt="" />
                             </div>
-                            <div>
-
+                            <div class="bg-red-50 h-[135px] rounded-xl">
+                                <img src="" alt="" />
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-3 gap-5">
+                            <div class="bg-green-50 rounded-xl p-10 row-span-2">
+                                <img src="" alt="" />
+                            </div>
+                            <div class="bg-green-50 rounded-xl p-10 row-span-2 ">
+                                <img src="" alt="" />
+                            </div>
+                            <div class="bg-red-50 rounded-xl h-[135px]">
+                                <img src="" alt="" />
+                            </div>
+                            <div class="bg-red-50 h-[135px] rounded-xl">
+                                <img src="" alt="" />
                             </div>
                         </div>
                     </div>
