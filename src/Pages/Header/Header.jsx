@@ -2,6 +2,10 @@ import React from "react";
 import Layout from "../../Layout/Layout";
 import { Link } from "react-router-dom";
 import { HiLightningBolt, HiGift } from "react-icons/hi";
+import Banner1 from '../../Assets/Header/banner-1.jpg'
+import Menmodel from '../../Assets/Header/man-model.jpg'
+import WoMenmodel from '../../Assets/Header/women-model.jpg'
+import Banner2 from '../../Assets/Header/banner-2.jpg'
 
 import './Header.css'
 
@@ -44,35 +48,25 @@ const Header = () => {
                             </Link>
                         </ul>
                     </div>
-                    <div className="md:w-[80%] flex flex-col gap-10">
-                        <div class="grid grid-cols-3 gap-5">
-                            <div class="bg-red-50 rounded-xl h-[135px]">
-                                <img src="" alt="" />
+                    <div className="md:w-[80%] md:flex flex-col ">
+                         <div className="md:flex gap-5 ">
+                            <div className="flex flex-col gap-5 md:w-[60%]">
+                                <div className="w-[100%] rounded-lg h-[180px] bg-green-200">
+                                    <img className="rounded-lg h-[180px] w-full" src={Banner1} alt="" />
+                                </div>
+                                <div className="w-[100%] rounded-lg h-[180px] bg-green-200">
+                                    <img className="h-[180px] w-full rounded-lg" src={Banner2} alt="" />
+                                </div>
                             </div>
-                            <div class="bg-green-50 rounded-xl p-10 row-span-2">
-                                <img src="" alt="" />
+                            <div className="flex md:w-[40%] md:mt-0 mt-5 gap-5">
+                                <div className="w-[100%] rounded-lg md:h-[380px] h-[300px] bg-green-200">
+                                    <img className="rounded-lg h-full" src={Menmodel} alt="" />
+                                </div>
+                                <div className="w-[100%] rounded-lg md:h-[380px] h-[300px] bg-green-200">
+                                    <img className="h-full rounded-lg" src={WoMenmodel} alt="" />
+                                </div>
                             </div>
-                            <div class="bg-green-50 rounded-xl p-10 row-span-2">
-                                <img src="" alt="" />
-                            </div>
-                            <div class="bg-red-50 h-[135px] rounded-xl">
-                                <img src="" alt="" />
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-3 gap-5">
-                            <div class="bg-green-50 rounded-xl p-10 row-span-2">
-                                <img src="" alt="" />
-                            </div>
-                            <div class="bg-green-50 rounded-xl p-10 row-span-2 ">
-                                <img src="" alt="" />
-                            </div>
-                            <div class="bg-red-50 rounded-xl h-[135px]">
-                                <img src="" alt="" />
-                            </div>
-                            <div class="bg-red-50 h-[135px] rounded-xl">
-                                <img src="" alt="" />
-                            </div>
-                        </div>
+                         </div>
                     </div>
                 </section>
             </Layout>
