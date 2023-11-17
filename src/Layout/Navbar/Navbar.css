@@ -21,16 +21,18 @@ nav ul{
     align-items: center;
 }  
 nav li:first-child{
-    margin-right: auto; 
+    margin-right: auto;  
 }
 nav a{
-    font-weight: bold;
-    height: 100%;
+    font-weight: bold; 
     padding: 0 25px;
     text-decoration: none;
-    display: flex;align-items: center;
+    display: flex;
+    align-items: center;
     color: rgb(65, 64, 64);
 }
+
+
 nav a:hover{  
     color: darkblue;
 }
@@ -57,8 +59,7 @@ nav a:hover{
 }
 .sidebar a{
     height: 50px;
-} 
-
+}  
 .menu-icon{
     display: none;
 }
@@ -67,6 +68,9 @@ nav a:hover{
     .hideOnMobile{
         display: none;
     } 
+    nav a{
+        justify-content: space-between;
+    }
     .logo{
         max-width: 200px;
     }
