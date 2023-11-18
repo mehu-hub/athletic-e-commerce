@@ -4,8 +4,11 @@ import { FaCartPlus, FaSearch, FaStream, FaChevronRight, FaTelegramPlane, FaHear
 import { HiPhone } from "react-icons/hi";
 import './Navbar.css'
 import logo from "../../Assets/images/logo-blue.png"
+import { useCart } from 'react-use-cart';
 
 const Navbar = () => {
+    const { totalUniqueItems } = useCart();
+
     function showSidebar() {
         const sidebar = document.querySelector('.sidebar');
         sidebar.style.display = 'flex'
@@ -51,15 +54,16 @@ const Navbar = () => {
                             <input className='outline-none p-2 w-[400px]' type="search" placeholder='Search your products' />
                         </li>
                         <Link className='mt-10'>
-                            <li className='flex flex-col md:flex-row md:gap-10 gap-5'>
-                                <div className="flex w-full md:w-auto items-center gap-2 text-xl">
+                            <li className='flex flex-col md:flex-row md:gap-10 '>
+                                <Link className="flex w-full md:w-auto items-center gap-2 text-xl">
                                     <FaHeart />
                                     Wishlist
-                                </div>
-                                <div className="flex items-center gap-2 text-xl">
+                                </Link>
+                                <Link to={'/cart'} className="flex items-center gap-2 text-xl">
                                     <FaCartPlus />
                                     Cart
-                                </div>
+                                    <span>{totalUniqueItems}</span>
+                                </Link>
                             </li>
                         </Link>
                         <Link className='mt-10 w-full'>
@@ -71,21 +75,29 @@ const Navbar = () => {
                     </ul>
 
                     <ul>
-                        <li><img className="md:w-[150px] w-[120px]" src={logo} alt="" /></li>
+                        <li><a href="/"><img className="md:w-[150px] w-[120px]" src={logo} alt="" /></a></li>
                         <li className='hideOnMobile mr-10 flex items-center text-gray-400 rounded px-4 border-b-2 border-blue-400'>
                             <FaSearch />
                             <input className='outline-none p-2 w-[400px]' type="search" placeholder='Search your products' />
                         </li>
-                        <li className='hideOnMobile flex gap-10'>
-                            <div className="flex items-center gap-2 text-xl">
+
+                        <li className='hideOnMobile flex'>
+                            <Link className="flex items-center gap-2 text-[18px]">
                                 <FaHeart />
-                                Wishlist
-                            </div>
-                            <div className="flex items-center gap-2 text-xl">
+                                <div className='flex gap-[5px]'>
+                                    Wishlist
+                                    <span>(0)</span>
+                                </div>
+                            </Link>
+                            <Link to={'/cart'} className="flex items-center gap-2 text-[18px]">
                                 <FaCartPlus />
-                                Cart
-                            </div>
+                                <div className='flex gap-[5px]'>
+                                    Cart
+                                    <span>{totalUniqueItems}</span>
+                                </div>
+                            </Link>
                         </li>
+
                         <Link><li onClick={showSidebar} className='menu-icon text-[20px]'><FaStream /></li></Link>
                     </ul>
                 </nav>

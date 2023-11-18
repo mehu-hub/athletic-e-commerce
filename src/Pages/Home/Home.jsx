@@ -1,11 +1,14 @@
 import React from 'react'; 
 import Header from '../Header/Header';
+import ProductCard from '../../Components/ProductCard';
+import Layout from '../../Layout/Layout';
 
 const Home = () => {
     return (
-        <div>
+        <Layout>
             <Header/>
-        </div>
+            <ProductCard/>
+        </Layout>
     );
 };
 

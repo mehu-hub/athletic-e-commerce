@@ -13,7 +13,7 @@ import { FaCartPlus, FaHeart, FaSearch } from "react-icons/fa";
 const Header = () => {
     return (
         <>
-            <Layout>
+            <div>
                 <div className="container mx-auto flex justify-between mt-4 hidden">
                     <li className='md:w-2/4 w-full flex items-center text-gray-400 rounded px-4 border border-blue-400'>
                         <FaSearch />
@@ -93,7 +93,7 @@ const Header = () => {
                         </div>
                     </div>
                 </section>
-            </Layout>
+            </div>
         </>
     )
 }

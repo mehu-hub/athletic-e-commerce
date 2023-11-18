@@ -8,21 +8,29 @@ import Blogs from './Pages/Blogs/Blogs';
 import axios from 'axios';
 import BlogDetails from './Pages/Blogs/BlogDetails';
 import Men from './Pages/Men/Men';
+import SettingsProvider from './Components/SettingsProvider';
+import Cart from './Pages/Cart/Cart';
+import { CartProvider } from 'react-use-cart';
 
 
 function App() {
-  axios.defaults.baseURL="https://uol-v-2.hostprohub.com/api/";
+  axios.defaults.baseURL = "https://uol-v-2.hostprohub.com/api/";
   return (
     <>
-      <Routes>
-        <Route extact path='/' element={<Home />} />
-        <Route extact path='/shop' element={<Shop />} />
-        <Route extact path='/menfashion' element={<Men />} />
-        <Route extact path='/about' element={<About />} />
-        <Route extact path='/contact' element={<Contact />} /> 
-        <Route extact path='/blogs' element={<Blogs />} /> 
-        <Route extact path='/blogs/:slug' element={<BlogDetails />} /> 
-      </Routes>
+      <CartProvider>
+        <SettingsProvider>
+          <Routes>
+            <Route extact path="/" element={<Home />} />
+            <Route extact path="/shop" element={<Shop />} />
+            <Route extact path="/menfashion" element={<Men />} />
+            <Route extact path="/about" element={<About />} />
+            <Route extact path="/contact" element={<Contact />} />
+            <Route extact path="/blogs" element={<Blogs />} />
+            <Route extact path="/blogs/:slug" element={<BlogDetails />} />
+            <Route exact path="/cart" element={<Cart />} />
+          </Routes>
+        </SettingsProvider>
+      </CartProvider>
     </>
   );
 }
