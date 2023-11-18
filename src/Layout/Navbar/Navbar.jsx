@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaCartPlus, FaSearch, FaStream, FaChevronRight, FaTelegramPlane } from "react-icons/fa";
-import {    HiPhone } from "react-icons/hi";
+import { HiPhone } from "react-icons/hi";
 import './Navbar.css'
 import logo from "../../Assets/images/logo-blue.png"
 
@@ -24,7 +24,7 @@ const Navbar = () => {
                         <FaTelegramPlane className='text-[15px]' />
                         <p>Express delivery and free returns within 7 days</p>
                     </div>
-                    <div className='flex justify-around items-center gap-4 mr-20'> 
+                    <div className='flex justify-around items-center gap-4 mr-20'>
                         <div className='flex items-center gap-2 text-red-400'>
                             <HiPhone className='text-[18px]' />
                             <p>+880 1310756941</p>
@@ -32,7 +32,7 @@ const Navbar = () => {
                         <div className='border-r-2 h-4 border-red-400'>
 
                         </div>
-                        <div className='flex items-center gap-2 text-red-400'> 
+                        <div className='flex items-center gap-2 text-red-400'>
                             <Link to={'/login'}>Login</Link>
                             <Link to={'/signup'}>Signup</Link>
                         </div>
@@ -44,7 +44,7 @@ const Navbar = () => {
 
                 {/* Navigation menu start */}
                 <nav className='container mx-auto nav-items-div'>
-                    <ul className="sidebar"> 
+                    <ul className="sidebar">
                         <li onClick={hideSidebar}><Link><FaChevronRight /></Link></li>
                         <li className='flex justify-center items-center text-gray-400 border-b-2 border-blue-200'>
                             <FaSearch className='hideOnMobile' />
@@ -63,22 +63,22 @@ const Navbar = () => {
                     </ul>
 
                     <ul>
-                        <li><img className="md:w-[150px]" src={logo} alt="" /></li>
+                        <li><img className="md:w-[150px] w-3    /4" src={logo} alt="" /></li>
                         <li className='hideOnMobile flex justify-center items-center text-gray-400 border-b-2 border-blue-600'>
                             <FaSearch />
                             <input className='outline-none p-2 w-[400px]' type="search" placeholder='Search your products' />
                         </li>
-                        <Link to={'/'}><li>products</li></Link>
-                        <Link to={'/menfashion'}><li>men</li></Link>
-                        <Link to={'/womenfashion'}><li>women</li></Link>
-                        <Link to={'/kidsfashion'}><li>kids</li></Link>
+                        <Link className='hideOnMobile' to={'/'}><li>products</li></Link>
+                        <Link className='hideOnMobile' to={'/menfashion'}><li>men</li></Link>
+                        <Link className='hideOnMobile' to={'/womenfashion'}><li>women</li></Link>
+                        <Link className='hideOnMobile' to={'/kidsfashion'}><li>kids</li></Link>
                         <Link>
                             <li className='flex text-xl gap-2 items-center hideOnMobile'>
                                 <FaCartPlus />
                                 Cart
                             </li>
                         </Link>
-                        <Link><li onClick={showSidebar} className='menu-icon text-[25px]'><FaStream /></li></Link> 
+                        <Link><li onClick={showSidebar} className='menu-icon text-[25px]'><FaStream /></li></Link>
                     </ul>
                 </nav>
             </div>

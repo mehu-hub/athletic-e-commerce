@@ -54,16 +54,16 @@ const Header = () => {
                             <div className="md:w-[60%]">
                                 <Carousel indicatorsType="ring" className="h-full" indicators={true}>
                                     <img
-                                        src="https://img.freepik.com/free-psd/fashion-blog-template-psd-fashion-lifestyle-magazine_53876-140013.jpg?w=1380&t=st=1700274641~exp=1700275241~hmac=f850fd3eb944cb23fa3cee04e9332912da157f82b98592627ac46c9412357067"
-                                        alt="slider-1" 
+                                        src="https://img.freepik.com/free-photo/brutal-man-with-phone_1303-9214.jpg?w=1380&t=st=1700274588~exp=1700275188~hmac=67b83c45c861cf7a4c3440ccfbde4887ed6d6fc67b679ca3f5107fcdb97f29e2"
+                                        alt="slider-4"
                                     />
                                     <img
                                         src="https://img.freepik.com/free-photo/group-beautiful-girls-boys_155003-8333.jpg?w=1380&t=st=1700274699~exp=1700275299~hmac=16e4a40bc2fafdb43e20de9ffbfaaa1bee5df50c2ee450781e659aa72b32c3a8"
-                                        alt="slider-2" 
-                                    /> 
+                                        alt="slider-2"
+                                    />
                                     <img
-                                        src="https://img.freepik.com/free-photo/brutal-man-with-phone_1303-9214.jpg?w=1380&t=st=1700274588~exp=1700275188~hmac=67b83c45c861cf7a4c3440ccfbde4887ed6d6fc67b679ca3f5107fcdb97f29e2"
-                                        alt="slider-4" 
+                                        src="https://img.freepik.com/premium-photo/upper-class-woman-fashionable-woman-texting-outdoors-fashion-woman-sunglasses-pink-jacket-with-coffee_153585-118.jpg"
+                                        alt="slider-1"
                                     />
                                 </Carousel>
                             </div>
