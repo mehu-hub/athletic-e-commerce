@@ -50,10 +50,10 @@ const Navbar = () => {
                             <FaSearch className='hideOnMobile' />
                             <input className='outline-none p-2 w-[400px]' type="search" placeholder='Search your products' />
                         </li>
-                        <Link><li>products</li></Link>
-                        <Link><li>men</li></Link>
-                        <Link><li>women</li></Link>
-                        <Link><li>kids</li></Link>
+                        <Link to={'/products'}><li>products</li></Link>
+                        <Link to={'/menfashion'}><li>men</li></Link>
+                        <Link to={'/womenfashion'}><li>women</li></Link>
+                        <Link to={'/kidsfashion'}><li>kids</li></Link>
                         <Link>
                             <li className='flex text-xl gap-2 items-center'>
                                 <FaCartPlus />
@@ -68,10 +68,10 @@ const Navbar = () => {
                             <FaSearch />
                             <input className='outline-none p-2 w-[400px]' type="search" placeholder='Search your products' />
                         </li>
-                        <Link><li className='hideOnMobile'>products</li></Link>
-                        <Link><li className='hideOnMobile'>men</li></Link>
-                        <Link><li className='hideOnMobile'>women</li></Link>
-                        <Link><li className='hideOnMobile'>kids</li></Link>
+                        <Link to={'/'}><li>products</li></Link>
+                        <Link to={'/menfashion'}><li>men</li></Link>
+                        <Link to={'/womenfashion'}><li>women</li></Link>
+                        <Link to={'/kidsfashion'}><li>kids</li></Link>
                         <Link>
                             <li className='flex text-xl gap-2 items-center hideOnMobile'>
                                 <FaCartPlus />

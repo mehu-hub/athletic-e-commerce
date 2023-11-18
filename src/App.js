@@ -7,6 +7,7 @@ import Contact from './Pages/Contact/Contact';
 import Blogs from './Pages/Blogs/Blogs';
 import axios from 'axios';
 import BlogDetails from './Pages/Blogs/BlogDetails';
+import Men from './Pages/Men/Men';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route extact path='/' element={<Home />} />
         <Route extact path='/shop' element={<Shop />} />
+        <Route extact path='/menfashion' element={<Men />} />
         <Route extact path='/about' element={<About />} />
         <Route extact path='/contact' element={<Contact />} /> 
         <Route extact path='/blogs' element={<Blogs />} /> 
