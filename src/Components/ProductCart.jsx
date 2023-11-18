@@ -9,7 +9,7 @@ const ProductCart = (props) => {
 
     return (
         <>
-            <div className="border-2 border-blue-400 md:mt-5 p-5 rounded-lg relative">
+            <div className="border-2 border-blue-200 md:mt-5 p-5 rounded-lg relative">
 
                 {Number(product?.discounted_price) > 0 && (
 
