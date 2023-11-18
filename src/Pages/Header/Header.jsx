@@ -2,21 +2,36 @@ import React from "react";
 import Layout from "../../Layout/Layout";
 import { Link } from "react-router-dom";
 import { HiLightningBolt, HiGift } from "react-icons/hi";
-import Banner1 from '../../Assets/Header/banner-1.jpg'
 import Menmodel from '../../Assets/Header/man-model.jpg'
 import WoMenmodel from '../../Assets/Header/women-model.jpg'
-import Banner2 from '../../Assets/Header/banner-2.jpg'
 import { Carousel } from "keep-react";
 
 import './Header.css'
+import { FaCartPlus, FaHeart, FaSearch } from "react-icons/fa";
 
 
 const Header = () => {
     return (
         <>
             <Layout>
-                <section className="container mx-auto mt-10 md:flex gap-10">
-                    <div className="md:w-[15%]">
+                <div className="container mx-auto flex justify-between mt-4 hidden">
+                    <li className='md:w-2/4 w-full flex items-center text-gray-400 rounded px-4 border border-blue-400'>
+                        <FaSearch />
+                        <input className='outline-none p-2 w-[400px]' type="search" placeholder='Search your products' />
+                    </li>
+                    <li className='flex gap-10'>
+                        <div className="flex items-center gap-2 text-xl">
+                            <FaHeart />
+                            Wishlist
+                        </div>
+                        <div className="flex items-center gap-2 text-xl">
+                            <FaCartPlus />
+                            Cart
+                        </div>
+                    </li>
+                </div>
+                <section className="container mx-auto mt-5 md:flex flex-col md:flex-row gap-10">
+                    <div className="md:w-[15%] w-[100%]">
                         <div className="flex items-center">
                             <HiLightningBolt className="text-2xl text-gray-600" />
                             <p className="text-4xl font-bold text-black">Categories</p>
@@ -49,9 +64,9 @@ const Header = () => {
                             </Link>
                         </ul>
                     </div>
-                    <div className="md:w-[85%] md:flex flex-col ">
+                    <div className="md:w-[85%] w-[100%] md:flex">
                         <div className="md:flex gap-5 ">
-                            <div className="md:w-[60%]">
+                            <div className="md:w-[60%] w-[100%]">
                                 <Carousel indicatorsType="ring" className="h-full" indicators={true}>
                                     <img
                                         src="https://img.freepik.com/free-photo/brutal-man-with-phone_1303-9214.jpg?w=1380&t=st=1700274588~exp=1700275188~hmac=67b83c45c861cf7a4c3440ccfbde4887ed6d6fc67b679ca3f5107fcdb97f29e2"

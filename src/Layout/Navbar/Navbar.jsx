@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaCartPlus, FaSearch, FaStream, FaChevronRight, FaTelegramPlane } from "react-icons/fa";
+import { FaCartPlus, FaSearch, FaStream, FaChevronRight, FaTelegramPlane, FaHeart } from "react-icons/fa";
 import { HiPhone } from "react-icons/hi";
 import './Navbar.css'
 import logo from "../../Assets/images/logo-blue.png"
@@ -24,7 +24,7 @@ const Navbar = () => {
                         <FaTelegramPlane className='text-[15px]' />
                         <p>Express delivery and free returns within 7 days</p>
                     </div>
-                    <div className='flex justify-around items-center gap-4 mr-20'>
+                    <div className='flex justify-around items-center gap-4 '>
                         <div className='flex items-center gap-2 text-red-400'>
                             <HiPhone className='text-[18px]' />
                             <p>+880 1310756941</p>
@@ -46,39 +46,47 @@ const Navbar = () => {
                 <nav className='container mx-auto nav-items-div'>
                     <ul className="sidebar">
                         <li onClick={hideSidebar}><Link><FaChevronRight /></Link></li>
-                        <li className='flex justify-center items-center text-gray-400 border-b-2 border-blue-200'>
-                            <FaSearch className='hideOnMobile' />
+                        <li className='flex items-center text-gray-400 rounded px-4 border border-blue-400'>
+                            <FaSearch className='md:block hidden' />
                             <input className='outline-none p-2 w-[400px]' type="search" placeholder='Search your products' />
                         </li>
-                        <Link to={'/products'}><li>products</li></Link>
-                        <Link to={'/menfashion'}><li>men</li></Link>
-                        <Link to={'/womenfashion'}><li>women</li></Link>
-                        <Link to={'/kidsfashion'}><li>kids</li></Link>
-                        <Link>
-                            <li className='flex text-xl gap-2 items-center'>
-                                <FaCartPlus />
-                                Cart
+                        <Link className='mt-10'>
+                            <li className='flex flex-col md:flex-row md:gap-10 gap-5'>
+                                <div className="flex w-full md:w-auto items-center gap-2 text-xl">
+                                    <FaHeart />
+                                    Wishlist
+                                </div>
+                                <div className="flex items-center gap-2 text-xl">
+                                    <FaCartPlus />
+                                    Cart
+                                </div>
                             </li>
+                        </Link>
+                        <Link className='mt-10 w-full'>
+                            <li className='w-full bg-blue-400 p-2 rounded text-white text-center mt-2'>Login</li>
+                        </Link>
+                        <Link className='w-full'>
+                            <li className='w-full bg-blue-200 p-2 rounded text-white text-center mt-2'>Signup</li>
                         </Link>
                     </ul>
 
                     <ul>
-                        <li><img className="md:w-[150px] w-3    /4" src={logo} alt="" /></li>
-                        <li className='hideOnMobile flex justify-center items-center text-gray-400 border-b-2 border-blue-600'>
+                        <li><img className="md:w-[150px] w-[120px]" src={logo} alt="" /></li>
+                        <li className='hideOnMobile mr-10 flex items-center text-gray-400 rounded px-4 border-b-2 border-blue-400'>
                             <FaSearch />
                             <input className='outline-none p-2 w-[400px]' type="search" placeholder='Search your products' />
                         </li>
-                        <Link className='hideOnMobile' to={'/'}><li>products</li></Link>
-                        <Link className='hideOnMobile' to={'/menfashion'}><li>men</li></Link>
-                        <Link className='hideOnMobile' to={'/womenfashion'}><li>women</li></Link>
-                        <Link className='hideOnMobile' to={'/kidsfashion'}><li>kids</li></Link>
-                        <Link>
-                            <li className='flex text-xl gap-2 items-center hideOnMobile'>
+                        <li className='hideOnMobile flex gap-10'>
+                            <div className="flex items-center gap-2 text-xl">
+                                <FaHeart />
+                                Wishlist
+                            </div>
+                            <div className="flex items-center gap-2 text-xl">
                                 <FaCartPlus />
                                 Cart
-                            </li>
-                        </Link>
-                        <Link><li onClick={showSidebar} className='menu-icon text-[25px]'><FaStream /></li></Link>
+                            </div>
+                        </li>
+                        <Link><li onClick={showSidebar} className='menu-icon text-[20px]'><FaStream /></li></Link>
                     </ul>
                 </nav>
             </div>
