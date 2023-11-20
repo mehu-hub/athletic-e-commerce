@@ -67,7 +67,7 @@ const Navbar = () => {
                             </li>
                         </Link>
                         <Link className='mt-10 w-full'>
-                            <li className='w-full bg-blue-400 p-2 rounded text-white text-center mt-2'>Login</li>
+                            <li className='w-full bg-blue-400 p-2 rounded text-blue-200 text-center mt-2'>Login</li>
                         </Link>
                         <Link className='w-full'>
                             <li className='w-full bg-blue-200 p-2 rounded text-white text-center mt-2'>Signup</li>
