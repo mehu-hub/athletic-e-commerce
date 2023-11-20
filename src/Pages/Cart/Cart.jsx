@@ -14,7 +14,7 @@ const Cart = () => {
                     <table className="min-w-full divide-y divide-gray-300 p-4">
                         <thead>
                             <tr>
-                                <th scope="col" className="py-3.5  text-left text-[15px] font-semibold text-gray-900 sm:pl-0">
+                                <th scope="col " className="py-3.5  text-left text-[15px] font-semibold text-gray-900 sm:pl-0">
                                     Image
                                 </th>
                                 <th scope="col" className="py-3.5 px-3 text-left text-[15px] font-semibold text-gray-900">

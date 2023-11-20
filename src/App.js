@@ -12,12 +12,14 @@ import SettingsProvider from './Components/SettingsProvider';
 import Cart from './Pages/Cart/Cart';
 import { CartProvider } from 'react-use-cart';
 import ProductDetails from './Pages/ProductDetails/ProductDetails';
+import { ToastContainer } from 'react-toastify';
 
 
 function App() {
   axios.defaults.baseURL = "https://uol-v-2.hostprohub.com/api/";
   return (
     <>
+    <ToastContainer/>
       <CartProvider>
         <SettingsProvider>
           <Routes>

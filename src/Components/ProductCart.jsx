@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import '../Assets/Css/Cart.css'
 import { useCart } from "react-use-cart";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
+import Toaster from "./Common/Toaster";
 
 const ProductCart = (props) => {
     const { product } = props;
@@ -55,9 +57,9 @@ const ProductCart = (props) => {
                                             price: product?.final_product_price,
                                             image: product?.image?.small,
                                             stock: product?.stock
-                                        },);
+                                        },); 
                                     }
-                                    else {
+                                    else { 
                                     }
 
                                 }}>Add to Cart</button>
