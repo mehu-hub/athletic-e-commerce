@@ -11,6 +11,7 @@ import Men from './Pages/Men/Men';
 import SettingsProvider from './Components/SettingsProvider';
 import Cart from './Pages/Cart/Cart';
 import { CartProvider } from 'react-use-cart';
+import ProductDetails from './Pages/ProductDetails/ProductDetails';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
             <Route extact path="/contact" element={<Contact />} />
             <Route extact path="/blogs" element={<Blogs />} />
             <Route extact path="/blogs/:slug" element={<BlogDetails />} />
+            <Route extact path="/product/:slug" element={<ProductDetails />} />
             <Route exact path="/cart" element={<Cart />} />
           </Routes>
         </SettingsProvider>

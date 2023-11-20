@@ -30,7 +30,7 @@ const Blogs = () => {
                                     <button className="bg-green-400 py-2 px-5 rounded mt-5 text-white">Read More</button>
                                 </div>
                                 
-                            </div>
+                            </div> 
                         </Link>
                     )
                 })}
