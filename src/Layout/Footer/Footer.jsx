@@ -12,17 +12,17 @@ const Footer = () => {
                 </aside>
                 <nav className=''>
                     <header className="footer-title">Products</header>
-                    <Link className="text-gray-200 p-0 link link-hover">Men Fashion</Link>
-                    <Link className="text-gray-200 p-0 link link-hover">Women Fashion</Link>
-                    <Link className="text-gray-200 p-0 link link-hover">Kids Fashion</Link>
-                    <Link className="text-gray-200 p-0 link link-hover">Accessories</Link>
+                    <Link className="text-gray-200 p-0 hover:text-fuchsia-25">Men Fashion</Link>
+                    <Link className="text-gray-200 p-0 hover:text-fuchsia-25">Women Fashion</Link>
+                    <Link className="text-gray-200 p-0 hover:text-fuchsia-25">Kids Fashion</Link>
+                    <Link className="text-gray-200 p-0 hover:text-fuchsia-25">Accessories</Link>
                 </nav>
                 <nav>
                     <header className="footer-title">Company</header>
-                    <Link className="text-gray-200 p-0 link link-hover">About us</Link>
-                    <Link className="text-gray-200 p-0 link link-hover">Contact</Link>
-                    <Link className="text-gray-200 p-0 link link-hover">Jobs</Link>
-                    <Link className="text-gray-200 p-0 link link-hover">Press kit</Link>
+                    <Link className="text-gray-200 p-0 hover:text-fuchsia-25">About us</Link>
+                    <Link className="text-gray-200 p-0 hover:text-fuchsia-25">Contact</Link>
+                    <Link className="text-gray-200 p-0 hover:text-fuchsia-25">Jobs</Link>
+                    <Link className="text-gray-200 p-0 hover:text-fuchsia-25">Press kit</Link>
                 </nav>
                 <nav>
                     <form>
@@ -32,7 +32,7 @@ const Footer = () => {
                                 <span className="label-text text-gray-200">Enter your email address</span>
                             </label>
                             <div className="join">
-                                <input type="text" placeholder="your@gmail.com" className="input input-bordered join-item" />
+                                <input type="text" placeholder="your@gmail.com" className="input input-bordered text-blue-400 join-item" />
                                 <button className="btn btn-primary join-item">Subscribe</button>
                             </div>
                         </fieldset>
