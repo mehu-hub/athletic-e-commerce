@@ -32,8 +32,8 @@ const Footer = () => {
                                 <span className="label-text text-gray-200">Enter your email address</span>
                             </label>
                             <div className="join">
-                                <input type="text" placeholder="your@gmail.com" className="input input-bordered text-blue-400 join-item" />
-                                <button className="btn btn-primary join-item">Subscribe</button>
+                                {/* <input type="text" placeholder="your@gmail.com" className="input input-bordered text-blue-400 join-item" />
+                                <button className="btn btn-primary join-item">Subscribe</button> */}
                             </div>
                         </fieldset>
                     </form>
