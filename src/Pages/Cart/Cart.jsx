@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../../Layout/Layout';
 import { useCart } from 'react-use-cart';
+import swal from 'sweetalert';
 
 const Cart = () => {
     const { items, cartTotal, removeItem, updateItemQuantity } = useCart();
@@ -46,7 +47,10 @@ const Cart = () => {
                                             </div>
                                             <button className="bg-red-500 text-white rounded-lg px-6 p-2" onClick={() => {
                                                 removeItem(product?.id);
-                                                // Toaster("Product removed from cart", 'error')
+                                                swal({ 
+                                                    text: "Product Removed from Cart",
+                                                    icon: "success"
+                                                  });
                                             }}>
                                                 Delete
                                             </button>

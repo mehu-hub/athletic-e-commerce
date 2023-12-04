@@ -6,7 +6,9 @@ import './Navbar.css'
 import logo from "../../Assets/images/logo-blue.png"
 import { useCart } from 'react-use-cart';
 import axios from 'axios';
-import { UserContext } from '../../Components/Common/UserProvider';
+import { UserContext } from '../../Components/Common/UserProvider'; 
+import swal from 'sweetalert';
+
 
 const Navbar = () => {
     const { totalUniqueItems } = useCart();
@@ -23,8 +25,10 @@ const Navbar = () => {
         axios.post("customer/logout")
             .then(function (resp) {
                 if (resp.data.success) {
-
-                    // Toaster('Successfully logged out', 'success');
+                    swal({ 
+                        text: "Logout Successfully !",
+                        icon: "warning"
+                      });
                     localStorage.removeItem("user");
                     updateUserData(null);
 

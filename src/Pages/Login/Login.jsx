@@ -4,6 +4,7 @@ import './Login.css'
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { UserContext } from '../../Components/Common/UserProvider';
+import swal from 'sweetalert';
 // import Toaster from '../../Components/Common/Toaster';
 
 const Login = () => {
@@ -40,6 +41,10 @@ const Login = () => {
                     updateUserData(userData);
 
                     // Toaster('Loggedin Successfully', 'success')
+                    swal({ 
+                        text:"Login Successfully",
+                        icon: "success"
+                      });
 
                     navigate('/', { replace: true });
 
@@ -49,9 +54,7 @@ const Login = () => {
                 if (response?.data?.success === false) {
                     // Toaster(response?.data?.message, 'error')
                     setErrorMsg(response?.data?.message);
-                }
-                // Toaster('Login Successful', 'success');
-                navigate('/', { replace: true });
+                } 
 
             })
             .catch(error => {
@@ -63,8 +66,8 @@ const Login = () => {
         <Layout>
             <form method='post' onSubmit={(e) => login(e)} className='container border-t-indigo-500 h-[500px] p-5 mt-10 flex flex-col justify-center login-form shadow-xl border-4 border-blue-50 rounded md:w-1/4 mx-auto'>
                
-                <h2 className='text-6xl text-center font-bold'>Login </h2>
-                <center><span className="text-red-600 my-6">{errorMsg}</span></center> 
+                <h2 className='text-6xl text-center font-bold'>Login </h2> 
+                {errorMsg && <center><span className="text-red-600 my-6">{errorMsg}</span></center>}
                 <input
                     value={userName} onChange={(e) => setUserName(e.target.value)}
                     className='border-2 border-gray-50 outline-none m-5 rounded p-2' placeholder='Email Address' type="email" required />

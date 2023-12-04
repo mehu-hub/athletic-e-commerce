@@ -87,7 +87,7 @@ const Signup = () => {
                     <input
                         value={name} onChange={(e) => setName(e.target.value)}
                         className='border-2 border-gray-50 outline-none m-5 rounded p-2' placeholder='Your Name' type="name" required />
-                    {errorList && <span className=" text-red-600">{errorList?.customer_name}</span>}
+                    {errorList && <span className=" text-red-600 ml-5">{errorList?.customer_name}</span>}
                     {nameError && <span className=" text-red-600">{nameError}</span>}
 
 

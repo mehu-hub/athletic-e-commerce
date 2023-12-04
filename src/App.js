@@ -1,6 +1,5 @@
 import axios from 'axios';
-import { Route, Routes } from "react-router-dom";
-import { ToastContainer } from 'react-toastify';
+import { Route, Routes } from "react-router-dom"; 
 import { CartProvider } from 'react-use-cart';
 import './App.css';
 import UserProvider from './Components/Common/UserProvider';
@@ -27,7 +26,7 @@ function App() {
   axios.defaults.baseURL = "https://uol-v-2.hostprohub.com/api/";
   return (
     <>
-      <ToastContainer />
+       
       <CartProvider>
         <SettingsProvider>
           <UserProvider>

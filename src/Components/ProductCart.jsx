@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import '../Assets/Css/Cart.css'
 import { useCart } from "react-use-cart";
-import { Link } from "react-router-dom";
-import { toast } from "react-toastify";
-import Toaster from "./Common/Toaster";
+import { Link } from "react-router-dom"; 
+import swal from "sweetalert";
 
 const ProductCart = (props) => {
     const { product } = props;
@@ -58,6 +57,10 @@ const ProductCart = (props) => {
                                             image: product?.image?.small,
                                             stock: product?.stock
                                         },); 
+                                        swal({ 
+                                            text: "Product added to Cart",
+                                            icon: "success"
+                                          });
                                     }
                                     else { 
                                     }
