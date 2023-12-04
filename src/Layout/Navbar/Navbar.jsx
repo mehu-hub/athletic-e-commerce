@@ -1,14 +1,42 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaCartPlus, FaSearch, FaStream, FaChevronRight, FaTelegramPlane, FaHeart } from "react-icons/fa";
 import { HiPhone } from "react-icons/hi";
 import './Navbar.css'
 import logo from "../../Assets/images/logo-blue.png"
 import { useCart } from 'react-use-cart';
+import axios from 'axios';
+import { UserContext } from '../../Components/Common/UserProvider';
 
 const Navbar = () => {
     const { totalUniqueItems } = useCart();
 
+    const navigate = useNavigate();
+    const { userData, updateUserData } = useContext(UserContext);
+
+    // Logout Function
+    // ------------------------------------------------------------
+    const logOut = () => {
+
+        axios.defaults.headers.common["Authorization"] = `Bearer ${userData?.token}`;
+
+        axios.post("customer/logout")
+            .then(function (resp) {
+                if (resp.data.success) {
+
+                    // Toaster('Successfully logged out', 'success');
+                    localStorage.removeItem("user");
+                    updateUserData(null);
+
+                    navigate("/", { replace: true });
+                }
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+
+    }
+    // ------------------------------------------------------------
     function showSidebar() {
         const sidebar = document.querySelector('.sidebar');
         sidebar.style.display = 'flex'
@@ -36,8 +64,28 @@ const Navbar = () => {
 
                         </div>
                         <div className='flex items-center gap-2 text-red-400'>
-                            <Link to={'/login'}>Login</Link>
-                            <Link to={'/signup'}>Signup</Link>
+                            {userData ? (
+                                <>
+                                    <h3 className='text-[15px] text-blue-800'>{userData?.name}</h3>
+                                    |
+                                    <button className='' onClick={logOut}>Logout</button>
+                                </>
+                            ) :
+                                (
+                                    <>
+                                        <Link
+                                            to={'/login'}
+                                            className="text-red-500 hover:text-red">
+                                            Login
+                                        </Link>
+                                        |
+                                        <Link
+                                            to={'/signup'}
+                                            className="text-red-500 hover:text-red">
+                                            Signup
+                                        </Link>
+                                    </>
+                                )}
                         </div>
                     </div>
                 </div>
@@ -66,12 +114,22 @@ const Navbar = () => {
                                 </Link>
                             </li>
                         </Link>
-                        <Link className='mt-10 w-full'>
-                            <li className='w-full bg-blue-400 p-2 rounded text-white text-center mt-2'>Login</li>
-                        </Link>
-                        <Link className='w-full'>
-                            <li className='w-full bg-blue-200 p-2 rounded text-white text-center mt-2'>Signup</li>
-                        </Link>
+                        {userData ? (
+                            <div className='m-10'>
+                                <h3 className='md:text-[15px] text-2xl text-blue-800'>{userData?.name}</h3> 
+                                <button className='text-red-600 font-semibold bg-white p-2 px-8 border-2 border-red-400 rounded mt-5' onClick={logOut}>Logout</button>
+                            </div>
+                        ) :
+                            (
+                                <>
+                                    <Link to={'/login'} className='mt-10 w-full'>
+                                        <li className='w-full bg-blue-400 p-2 rounded text-white text-center mt-2'>Login</li>
+                                    </Link> 
+                                    <Link to={'/signup'} className='w-full'>
+                                        <li className='w-full bg-blue-400 p-2 rounded text-white text-center'>Signup</li>
+                                    </Link>
+                                </>
+                            )} 
                     </ul>
 
                     <ul>
